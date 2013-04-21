@@ -25,6 +25,10 @@
 #include <stdint.h>
 #include "wayland-util.h"
 
+#ifndef ARRAY_LENGTH
+#define ARRAY_LENGTH (sizeof (a) / sizeof (a)[0])
+#endif /* ARRAY_LENGTH */
+
 static const struct wl_message wl_drm_requests[] = {
 	{ "authenticate", "u", NULL },
 	{ "create_buffer", "nuiiuo", NULL },
