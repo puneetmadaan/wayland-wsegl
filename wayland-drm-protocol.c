@@ -26,7 +26,7 @@
 #include "wayland-util.h"
 
 #ifndef ARRAY_LENGTH
-#define ARRAY_LENGTH (sizeof (a) / sizeof (a)[0])
+#define ARRAY_LENGTH(a) (sizeof (a) / sizeof (a)[0])
 #endif /* ARRAY_LENGTH */
 
 static const struct wl_message wl_drm_requests[] = {
